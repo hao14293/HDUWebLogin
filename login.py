@@ -1,7 +1,7 @@
 from HDULogin.LoginManager import LoginManager
 
-lm = LoginManager()
-lm.login(
+hdu = LoginManager()
+hdu.login(
     username = input("Please input your account: "),
     password = input("Please input your password: ")
 )
