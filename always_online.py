@@ -1,7 +1,7 @@
 import os
 import time
 from HDULogin.LoginManager import LoginManager
-
+from getpass import getpass
 def is_connect_internet(testip):
     status = os.system(u"ping {} -c 8".format(testip))
     return status == 0
@@ -27,7 +27,7 @@ def always_login(username, password, testip, checkinterval):
         
 if __name__ == "__main__":
     username = input("Your account: ")
-    password = input("Your password: ")
+    password = getpass("Your password: ")
     testip = "114.114.114.114" # IP to test whether the Internet is connected
     checkinterval = 5 * 60
 
